@@ -8,9 +8,17 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-brand">Smart Bicycle Kit</div>
-    <ul class="nav-links">
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="#architecture">Architecture</a></li>
       <li><a href="#power-generation">Power</a></li>
       <li><a href="#service-components">Services</a></li>
@@ -20,13 +28,15 @@
     </ul>
   </nav>
 
+  <!-- HERO -->
   <header class="hero">
     <h1>Renewable Energy for Smart Solutions</h1>
     <h2>Department of Electrical Engineering</h2>
     <p>Indian Institute of Engineering Science and Technology, Shibpur</p>
-    <span class="tagline">A plug-and-ride smart bicycle kit powered by motion</span>
+    <span class="tagline">Plug-and-ride smart bicycle kit powered by motion</span>
   </header>
 
+  <!-- OPPORTUNITY -->
   <section class="section">
     <h2>The Opportunity That We Saw</h2>
     <div class="cards">
@@ -51,10 +61,11 @@
     </div>
   </section>
 
+  <!-- ARCHITECTURE -->
   <section id="architecture" class="section">
     <h2>Overall System Architecture</h2>
     <figure>
-      <img src="overall_architecture.png" alt="overall_architecture.png" />
+      <img src="overall_architecture.png" alt="overall_architecture.png">
       <figcaption>Integrated power generation, sensing, processing, and monitoring</figcaption>
     </figure>
 
@@ -65,55 +76,58 @@
     </div>
   </section>
 
+  <!-- POWER -->
   <section id="power-generation" class="section highlight">
     <h2>Power Generation Overview</h2>
     <figure>
-      <img src="power_generation_overview.png" alt="power_generation_overview.png" />
+      <img src="power_generation_overview.png" alt="power_generation_overview.png">
     </figure>
 
     <ul class="explanation">
       <li>Bicycle dynamo generates 6W AC at 12V</li>
       <li>Schottky rectifier converts AC to DC</li>
-      <li>Capacitor smooths voltage ripples</li>
-      <li>TVS diode protects against surges</li>
+      <li>Capacitor filters voltage ripple</li>
+      <li>TVS diode protects against surge</li>
       <li>DC-DC converter regulates voltage</li>
       <li>BMS safely charges Li-ion battery</li>
     </ul>
   </section>
 
+  <!-- SERVICES -->
   <section id="service-components" class="section">
     <h2>Service Components Overview</h2>
 
     <figure>
-      <img src="service_components_overview.png" alt="service_components_overview.png" />
+      <img src="service_components_overview.png" alt="service_components_overview.png">
     </figure>
 
     <div class="cards">
       <div class="card">
         <h3>MPU-6050</h3>
-        <p>Detects sudden acceleration, tilt, and motion patterns using accelerometer and gyroscope data.</p>
+        <p>Detects sudden acceleration, tilt, and motion patterns using IMU data.</p>
       </div>
 
       <div class="card">
         <h3>GPS Neo-6M</h3>
-        <p>Provides real-time latitude and longitude for live tracking and route mapping.</p>
+        <p>Provides real-time latitude and longitude for live tracking.</p>
       </div>
 
       <div class="card">
         <h3>ESP32 Logic</h3>
-        <p>Processes sensor data, detects events, packages JSON, and communicates with backend services.</p>
+        <p>Processes sensor data, detects events, packages JSON, and sends to server.</p>
       </div>
     </div>
 
     <ol class="flow">
-      <li>Sensor data collected</li>
-      <li>Event detection & filtering</li>
-      <li>Token generated if required</li>
-      <li>Location sent every 10 seconds</li>
-      <li>JSON transmitted to server</li>
+      <li>Sensor data collection</li>
+      <li>Motion & event detection</li>
+      <li>Token generation</li>
+      <li>Location update every 10s</li>
+      <li>JSON sent to backend</li>
     </ol>
   </section>
 
+  <!-- APP -->
   <section id="app" class="section highlight">
     <h2>Mobile App Features</h2>
     <ul class="features">
@@ -125,6 +139,7 @@
     </ul>
   </section>
 
+  <!-- HARDWARE -->
   <section id="hardware" class="section">
     <h2>Hardware Components</h2>
     <div class="cards">
@@ -136,15 +151,16 @@
     </div>
   </section>
 
+  <!-- TEAM -->
   <section id="team" class="section highlight">
     <h2>Team Members</h2>
     <p>Rajeswar Nag · Ahana Pal · Sunnik</p>
   </section>
 
   <footer class="footer">
-    <p>© IIEST Shibpur · Electrical Engineering</p>
+    <p>© IIEST Shibpur · Department of Electrical Engineering</p>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
